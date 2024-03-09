@@ -14,8 +14,6 @@ const LayoutStyled = styled.main`
         column-gap: 2rem;
         grid-template-areas: "Profile Filter" "Profile Repo-List"
 }
-
-
 `
 
 

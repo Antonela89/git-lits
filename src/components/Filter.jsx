@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Icon from './icon';
 
 const FilterStyled = styled.div`
     grid-area: Filter;
@@ -9,7 +10,20 @@ const FilterStyled = styled.div`
 const Filter = () => {
     return (
         <FilterStyled>
-            Filter
+            <Icon name="arrowDown" />
+            <Icon name="book" />
+            <Icon name="branch" />
+            <Icon name="cancel" />
+            <Icon name="check" />
+            <Icon name="github" />
+            <Icon name="heart" />
+            <Icon name="home" />
+            <Icon name="link" />
+            <Icon name="location" />
+            <Icon name="search" />
+            <Icon name="star" />
+            <Icon name="twitter" />
+            <Icon name="user" />
         </FilterStyled>
     )
 }
