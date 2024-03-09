@@ -6,12 +6,24 @@ import Search from './components/Search.jsx';
 import './App.css';
 
 
+const repoList = [
+  {
+    name: "repo1",
+    id: 123,
+  },
+  {
+    name: "repo2",
+    id: 124,
+  }
+]
+
+
 function App() {
   return (
     <Layout>
       <Profile/>
       <Filter/>
-      <RepoList/>
+      <RepoList repoList={repoList}/>
       {/* <Search/> */}
     </Layout>
   );
