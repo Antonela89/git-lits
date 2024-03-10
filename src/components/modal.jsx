@@ -57,7 +57,6 @@ const ModalContentStyled = styled.form`
     .title {
         font: var(--headline2-semi-bold);
         margin: 0;
-
     }
 `
 
