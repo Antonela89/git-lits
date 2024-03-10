@@ -14,13 +14,10 @@ function App() {
   const params = useParams();
   let username = !params.user ? 'leonidasesteban' : params.user;
   
-  // if(!username) {
-  //   username = 'leonidasesteban'
-  // }  
-  
   const [ user, setUser ] = useState({});
   const [ repos, setRepos ] = useState([]);
   const [ isVisible, setIsVisible] = useState(false);
+  const [ search, setSearch] = useState("")
 
   useEffect(() => {
     getUser(username).then(({data, isError}) => {
@@ -46,8 +43,8 @@ function App() {
     <Layout>
       <Modal visibility={isVisible} setIsVisible = {setIsVisible}/>
       <Profile {...user}/>
-      <Filter/>
-      <RepoList repoList={repos}/>
+      <Filter setSearch={setSearch} repoListCount={repos.length}/>
+      <RepoList repoList={repos} search={search}/>
       <Search setIsVisible = {setIsVisible}/>
     </Layout>
   );
