@@ -8,6 +8,7 @@ const InputText = styled.input`
     padding-block: 0.5rem;
     padding-inline: 1rem;
     color: var(--white);
+    flex: 1;
 
 `
 
