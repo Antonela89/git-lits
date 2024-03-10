@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import props from './profile-data.js';
+// import props from './profile-data.js';
 import Button from './Button';
 import Icon from './icon';
 
 const ProfileStyled = styled.div`
     grid-area: Profile;
-    /* background-color: yellow; */
 
     .avatar {
         border-radius:50%;
@@ -50,7 +49,7 @@ const ProfileStyled = styled.div`
     }
 `
 
-const Profile = () => {
+const Profile = (props) => {
 
     const  { name, login, avatar_url, bio, followers, following, location, blog, twitter_username} = props;
 

@@ -8,7 +8,7 @@ const LayoutStyled = styled.main`
     padding-inline: 1.25rem;
     
     @media screen and (min-width: 768px) {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         grid-template-columns: 278px 1fr;
         grid-template-rows: auto 1fr;
         column-gap: 2rem;
