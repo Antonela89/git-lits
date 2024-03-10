@@ -3,8 +3,9 @@ import RepoItem from './Repo-Item';
 
 const RepoListStyled = styled.div`
     grid-area: Repo-List;
-    background-color: pink;
-
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 `
 
 const RepoList = ({ repoList }) => {

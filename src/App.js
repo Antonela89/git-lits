@@ -3,19 +3,20 @@ import Profile from './components/Profile.jsx';
 import Filter from './components/Filter.jsx';
 import RepoList from './components/Repo-List.jsx';
 import Search from './components/Search.jsx';
+import RepoData from './components/repo-data'
 import './App.css';
 
 
-const repoList = [
-  {
-    name: "repo1",
-    id: 123,
-  },
-  {
-    name: "repo2",
-    id: 124,
-  }
-]
+// const repoList = [
+//   {
+//     name: "repo1",
+//     id: 123,
+//   },
+//   {
+//     name: "repo2",
+//     id: 124,
+//   }
+// ]
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
     <Layout>
       <Profile/>
       <Filter/>
-      <RepoList repoList={repoList}/>
+      <RepoList repoList={RepoData}/>
       {/* <Search/> */}
     </Layout>
   );
