@@ -1,15 +1,23 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { ButtonRounded } from './Button';
+import Icon from './icon';
+
 
 const SearchStyled = styled.div`
-    grid-area: Search;
-    background-color: green;
+    position: fixed;
+    inset-inline-end: 1.5rem;
+    inset-block-end: 1.5rem;
 
 `
 
-const Search = () => {
+const Search = ({setIsVisible}) => {
+
+    const handleClick = () => {
+        setIsVisible(true);
+    }
     return (
-        <SearchStyled>
-            Search
+        <SearchStyled onClick={handleClick}>
+            <ButtonRounded icon={<Icon name="search" size={24}/>}/>
         </SearchStyled>
     )
 }

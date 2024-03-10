@@ -41,4 +41,25 @@ const Button = ({text, link, className, icon}) => {
     )
 }
 
+export const ButtonContrast = styled(Button)`
+    color: var(--buttonBG);
+    background: var(--white);
+    &:hover {
+        background: var(--buttonBG);
+        color: var(--white);
+    }
+`
+
+export const ButtonRounded = styled(Button)`
+    min-inline-size: initial;
+    border: 2px solid var(--grey);
+    border-radius: 50px;
+    padding: 0.75rem;
+    &:hover {
+        background: var(--buttonBG);
+        transform: scale(1.1);
+    }
+
+`
+
 export default Button

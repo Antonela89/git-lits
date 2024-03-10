@@ -6,6 +6,7 @@ import RepoList from './components/Repo-List.jsx';
 import Search from './components/Search.jsx';
 import { getUser, getReposUser } from './services/users';
 import { useParams } from 'react-router-dom';
+import Modal from './components/modal.jsx';
 import './App.css';
 
 
@@ -17,8 +18,9 @@ function App() {
   //   username = 'leonidasesteban'
   // }  
   
-  const [ user, setUser ] = useState({})
-  const [ repos, setRepos ] = useState([])
+  const [ user, setUser ] = useState({});
+  const [ repos, setRepos ] = useState([]);
+  const [ isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     getUser(username).then(({data, isError}) => {
@@ -42,10 +44,11 @@ function App() {
 
   return (
     <Layout>
+      <Modal visibility={isVisible} setIsVisible = {setIsVisible}/>
       <Profile {...user}/>
       <Filter/>
       <RepoList repoList={repos}/>
-      {/* <Search/> */}
+      <Search setIsVisible = {setIsVisible}/>
     </Layout>
   );
 }
