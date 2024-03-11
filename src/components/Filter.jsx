@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import InputText from './input-text';
 import Selector from './selector';
 import Separator from './separator';
-// import Icon from './icon';
 
 const FilterStyled = styled.div`
     grid-area: Filter;

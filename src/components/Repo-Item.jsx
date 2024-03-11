@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Language from './Language';
+import Language from './language';
 import Icon from './icon';
 
 const RepoItemStyled = styled.div`

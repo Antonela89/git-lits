@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ButtonRounded } from './Button';
+import { ButtonRounded } from './button';
 import Icon from './icon';
 
 

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-// import props from './profile-data.js';
-import Button from './Button';
+import Button from './button';
 import Icon from './icon';
 
 const ProfileStyled = styled.div`

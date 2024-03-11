@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { useNavigate } from 'react-router-dom';
-import Overlay from './Overlay';
-import { ButtonContrast } from './Button';
+import Overlay from './overlay';
+import { ButtonContrast } from './button';
 import InputText from './input-text';
 import styled from 'styled-components';
 

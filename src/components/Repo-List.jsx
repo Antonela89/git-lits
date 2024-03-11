@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import RepoItem from './Repo-Item';
+import RepoItem from './repo-Item';
 
 const RepoListStyled = styled.div`
     grid-area: Repo-List;

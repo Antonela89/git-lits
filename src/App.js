@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import Layout from './components/Layout.jsx';
-import Profile from './components/Profile.jsx';
-import Filter from './components/Filter.jsx';
-import RepoList from './components/Repo-List.jsx';
-import Search from './components/Search.jsx';
+import Layout from './components/layout.jsx';
+import Profile from './components/profile.jsx';
+import Filter from './components/filter.jsx';
+import RepoList from './components/repo-List.jsx';
+import Search from './components/search.jsx';
 import { getUser, getReposUser } from './services/users';
 import { useParams } from 'react-router-dom';
 import Modal from './components/modal.jsx';
