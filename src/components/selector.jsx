@@ -6,11 +6,12 @@ const SelectorStyled = styled.select`
     background: var(--buttonBG);
     color: var(--white);
     padding-inline: 1rem;
+
 `
 
-const Selector = ({children}) => {
+const Selector = ({children, onChange, name, defaultValue}) => {
     return (
-        <SelectorStyled>
+        <SelectorStyled onChange={onChange} name={name} defaultValue={defaultValue}>
             {children}
         </SelectorStyled>
     )

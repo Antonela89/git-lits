@@ -17,7 +17,10 @@ function App() {
   const [ user, setUser ] = useState({});
   const [ repos, setRepos ] = useState([]);
   const [ isVisible, setIsVisible] = useState(false);
-  const [ search, setSearch] = useState("")
+  const [ search, setSearch] = useState("");
+  const [ type, setType] = useState("");
+  const [ language, setLanguage ] = useState("");
+  const [ sort, setSort ] = useState("");
 
   useEffect(() => {
     getUser(username).then(({data, isError}) => {
@@ -43,8 +46,8 @@ function App() {
     <Layout>
       <Modal visibility={isVisible} setIsVisible = {setIsVisible}/>
       <Profile {...user}/>
-      <Filter setSearch={setSearch} repoListCount={repos.length}/>
-      <RepoList repoList={repos} search={search}/>
+      <Filter setSearch={setSearch} setType={setType} setLanguage={setLanguage} setSort={setSort} repoListCount={repos.length}/>
+      <RepoList repoList={repos} search={search} type={type} language={language} sort={sort}/>
       <Search setIsVisible = {setIsVisible}/>
     </Layout>
   );

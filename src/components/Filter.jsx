@@ -23,11 +23,26 @@ const FilterStyled = styled.div`
     }
 `
 
-const Filter = ({repoListCount, setSearch}) => {
+const Filter = ({repoListCount, setSearch, setType, setLanguage, setSort}) => {
     const handleChange = (event) => {
         setSearch(event.target.value);
     }
     
+    const handleSelect = (event) => {
+        let name = event.target.name;
+
+        switch (name) {
+            case 'tipo':
+                return setType(event.target.value);
+            case 'lenguaje':
+                return setLanguage(event.target.value);
+            case 'orden':
+                return setSort(event.target.value);
+            default:
+                return "";
+        }
+    }
+
     return (
         <FilterStyled>
             <h2 className="count">
@@ -40,15 +55,15 @@ const Filter = ({repoListCount, setSearch}) => {
                     onChange = {handleChange}
                     />
                 <div className="select-list">
-                    <Selector>
-                        <option value="tipo" disabled>Tipo</option>
+                    <Selector defaultValue='tipo' onChange={handleSelect} name='tipo'>
+                        <option value="tipo"  disabled>Tipo</option>
                         <option value="all">All</option>
                         <option value="sources">Sources</option>
                         <option value="forks">Forks</option>
                         <option value="archived">Archived</option>
                         <option value="mirrors">Mirrors</option>
                     </Selector>
-                    <Selector>
+                    <Selector defaultValue='lenguaje' onChange={handleSelect} name='lenguaje'>
                         <option value="lenguaje" disabled>Lenguaje</option>
                         <option value="all">All</option>
                         <option value="css">CSS</option>
@@ -56,7 +71,7 @@ const Filter = ({repoListCount, setSearch}) => {
                         <option value="java">Java</option>
                         <option value="htnml">HTML</option>
                     </Selector>
-                    <Selector>
+                    <Selector defaultValue='orden' onChange={handleSelect} name='orden'>
                         <option value="orden" disabled>Orden</option>
                         <option value="lastUpdated">Last Updated</option>
                         <option value="name">Name</option>
